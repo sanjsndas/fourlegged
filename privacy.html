@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Four Legged Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .privacy-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .privacy-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            pointer-events: none;
+        }
+
+        .privacy-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        /* Quick Summary */
+        .privacy-summary {
+            background: white;
+            margin: -30px auto 60px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .summary-title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .summary-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+            transition: transform 0.3s ease;
+        }
+
+        .summary-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .summary-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .summary-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .summary-item p {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content */
+        .privacy-content {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        }
+
+        .section-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .toggle-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section-content {
+            padding: 2rem;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .section-content ul {
+            margin: 1rem 0 1rem 2rem;
+            color: #4a5568;
+        }
+
+        .section-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f2ff, #f0f8ff);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .highlight-box h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .privacy-contact {
+            background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Footer */
+        .privacy-footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+
+            .header-subtitle {
+                font-size: 1rem;
+            }
+
+            .privacy-summary {
+                margin: -20px 20px 40px;
+                padding: 30px 20px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section-header {
+                padding: 1rem 1.5rem;
+            }
+
+            .section-content {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="privacy-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="header-subtitle">Your privacy matters to us. Here's how we protect and handle your information.</p>
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span>›</span>
+                <span>Privacy Policy</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Quick Summary -->
+    <section class="privacy-summary">
+        <div class="container">
+            <h2 class="summary-title">Privacy at a Glance</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-icon">🔒</div>
+                    <h4>Data Security</h4>
+                    <p>Your information is encrypted and stored securely using industry-standard protocols</p>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">🚫</div>
+                    <h4>No Selling</h4>
+                    <p>We never sell, rent, or share your personal data with third parties for marketing</p>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"✉️</div>
+                    <h4>Email Control</h4>
+                    <p>Easy unsubscribe from all communications with one-click opt-out</p>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">👤</div>
+                    <h4>Your Rights</h4>
+                    <p>Access, update, or delete your data anytime with full transparency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="privacy-content">
+        <div class="container">
+            
+            <!-- Information We Collect -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('collect')">
+                    <h3>Information We Collect</h3>
+                    <span class="toggle-icon" id="collect-icon">+</span>
+                </div>
+                <div class="section-content" id="collect-content">
+                    <p>We collect information to provide better services to our pet training clients. The types of information we gather include:</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Personal Information</h4>
+                        <p>Information you provide directly when booking services or contacting us.</p>
+                    </div>
+                    
+                    <ul>
+                        <li><strong>Contact Details:</strong> Name, email address, phone number, and mailing address</li>
+                        <li><strong>Pet Information:</strong> Pet names, breeds, ages, behavioral concerns, and training history</li>
+                        <li><strong>Service Preferences:</strong> Training programs of interest, scheduling preferences, and special requirements</li>
+                        <li><strong>Payment Information:</strong> Billing details processed securely through encrypted payment systems</li>
+                        <li><strong>Communication Records:</strong> Messages, emails, and notes from consultations</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <h4>Automatically Collected Information</h4>
+                        <p>Technical data collected when you visit our website or use our services.</p>
+                    </div>
+                    
+                    <ul>
+                        <li><strong>Website Usage:</strong> Pages visited, time spent, and navigation patterns</li>
+                        <li><strong>Device Information:</strong> Browser type, operating system, and device identifiers</li>
+                        <li><strong>Location Data:</strong> General location for service area determination (with consent)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- How We Use Information -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('use')">
+                    <h3>How We Use Your Information</h3>
+                    <span class="toggle-icon" id="use-icon">+</span>
+                </div>
+                <div class="section-content" id="use-content">
+                    <p>Your information helps us deliver personalized pet training services and improve our offerings:</p>
+                    
+                    <ul>
+                        <li><strong>Service Delivery:</strong> Schedule appointments, conduct training sessions, and provide follow-up support</li>
+                        <li><strong>Communication:</strong> Send appointment confirmations, training tips, and service updates</li>
+                        <li><strong>Personalization:</strong> Tailor training programs to your pet's specific needs and behaviors</li>
+                        <li><strong>Payment Processing:</strong> Handle transactions securely and maintain billing records</li>
+                        <li><strong>Service Improvement:</strong> Analyze feedback to enhance our training methods and customer experience</li>
+                        <li><strong>Legal Compliance:</strong> Meet regulatory requirements and protect against fraud</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <h4>Marketing Communications</h4>
+                        <p>With your consent, we may send training tips, success stories, and information about new services. You can opt-out anytime.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Information Sharing -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('sharing')">
+                    <h3>Information Sharing & Disclosure</h3>
+                    <span class="toggle-icon" id="sharing-icon">+</span>
+                </div>
+                <div class="section-content" id="sharing-content">
+                    <p>We respect your privacy and limit information sharing to essential business purposes:</p>
+                    
+                    <div class="highlight-box">
+                        <h4>We DO NOT sell your personal information</h4>
+                        <p>Your data is never sold, rented, or traded to third parties for marketing purposes.</p>
+                    </div>
+                    
+                    <p><strong>Limited sharing occurs only in these situations:</strong></p>
+                    <ul>
+                        <li><strong>Service Providers:</strong> Trusted partners who help deliver our services (payment processors, scheduling systems)</li>
+                        <li><strong>Veterinary Professionals:</strong> With your explicit consent, we may share relevant information with your vet</li>
+                        <li><strong>Legal Requirements:</strong> When required by law, court order, or to protect safety</li>
+                        <li><strong>Business Transfers:</strong> In the unlikely event of a business sale or merger (with notice to you)</li>
+                        <li><strong>Emergency Situations:</strong> To protect the health and safety of pets, owners, or staff</li>
+                    </ul>
+                    
+                    <p>All third parties we work with are required to maintain the same level of data protection we provide.</p>
+                </div>
+            </div>
+
+            <!-- Data Security -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('security')">
+                    <h3>Data Security & Protection</h3>
+                    <span class="toggle-icon" id="security-icon">+</span>
+                </div>
+                <div class="section-content" id="security-content">
+                    <p>We implement comprehensive security measures to protect your information:</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Technical Safeguards</h4>
+                        <p>Industry-standard security protocols protect your data from unauthorized access.</p>
+                    </div>
+                    
+                    <ul>
+                        <li><strong>Encryption:</strong> All sensitive data is encrypted in transit and at rest</li>
+                        <li><strong>Secure Servers:</strong> Data stored on protected servers with regular security updates</li>
+                        <li><strong>Access Controls:</strong> Limited access to personal information on a need-to-know basis</li>
+                        <li><strong>Regular Audits:</strong> Periodic security assessments and vulnerability testing</li>
+                        <li><strong>Staff Training:</strong> All team members trained on privacy protection and data handling</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <h4>Your Security Role</h4>
+                        <p>Help us protect your information by using strong passwords and keeping your login credentials secure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your Rights -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('rights')">
+                    <h3>Your Privacy Rights</h3>
+                    <span class="toggle-icon" id="rights-icon">+</span>
+                </div>
+                <div class="section-content" id="rights-content">
+                    <p>You have full control over your personal information. Your rights include:</p>
+                    
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of all personal information we have about you</li>
+                        <li><strong>Correction:</strong> Update or correct any inaccurate information</li>
+                        <li><strong>Deletion:</strong> Request deletion of your personal data (subject to legal requirements)</li>
+                        <li><strong>Portability:</strong> Receive your data in a standard format for transfer to another service</li>
+                        <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications at any time</li>
+                        <li><strong>Restrict Processing:</strong> Limit how we use your information in certain circumstances</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <h4>How to Exercise Your Rights</h4>
+                        <p>Contact us using the information below. We'll respond to all requests within 30 days and verify your identity for security.</p>
+                    </div>
+                    
+                    <p><strong>Note:</strong> Some information may be retained for legal or legitimate business purposes even after deletion requests.</p>
+                </div>
+            </div>
+
+            <!-- Cookies & Tracking -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('cookies')">
+                    <h3>Cookies & Tracking Technologies</h3>
+                    <span class="toggle-icon" id="cookies-icon">+</span>
+                </div>
+                <div class="section-content" id="cookies-content">
+                    <p>We use cookies and similar technologies to enhance your website experience:</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Types of Cookies We Use</h4>
+                        <p>Different cookies serve various purposes to improve functionality and user experience.</p>
+                    </div>
+                    
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Required for basic website functionality (cannot be disabled)</li>
+                        <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
+                        <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our website</li>
+                        <li><strong>Marketing Cookies:</strong> Used to show relevant advertisements (with consent)</li>
+                    </ul>
+                    
+                    <p><strong>Managing Cookies:</strong> You can control cookies through your browser settings. Note that disabling certain cookies may limit website functionality.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Third-Party Services</h4>
+                        <p>We use Google Analytics and similar services to understand website usage. These services have their own privacy policies governing data use.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Updates & Changes -->
+            <div class="privacy-section">
+                <div class="section-header" onclick="toggleSection('updates')">
+                    <h3>Policy Updates & Changes</h3>
+                    <span class="toggle-icon" id="updates-icon">+</span>
+                </div>
+                <div class="section-content" id="updates-content">
+                    <p>This privacy policy may be updated periodically to reflect changes in our practices or legal requirements:</p>
+                    
+                    <ul>
+                        <li><strong>Notification:</strong> We'll notify you of significant changes via email or website notice</li>
+                        <li><strong>Review Period:</strong> Major changes include a 30-day review period before implementation</li>
+                        <li><strong>Continued Use:</strong> Using our services after changes indicates acceptance of the updated policy</li>
+                        <li><strong>Version History:</strong> Previous versions available upon request</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <h4>Last Updated: May 27, 2025</h4>
+                        <p>This version includes enhanced data protection measures and expanded user rights information.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="privacy-contact">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="contact-title">Questions About Your Privacy?</h2>
+                <p>We're here to help! If you have any questions about this privacy policy, want to exercise your rights, or need clarification about how we handle your information, please don't hesitate to reach out.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>privacy@fourleggedtraining.xyz</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>⏰</span>
+                        <span>Response within 24 hours</span>
+                    </div>
+                </div>
+                
+                <a href="mailto:privacy@fourleggedtraining.xyz" class="cta-button">Contact Privacy Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="privacy-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+               
+              
+               
+                <a href="terms.html">Terms of Service</a>
+            </div>
+			<div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Location</strong><br>
+                               280 Newhall Street<br>
+                                San Francisco, CA 94124
+                            </div>
+            <p>&copy; 2025 Four Legged Training. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all other sections
+                document.querySelectorAll('.section-content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.querySelectorAll('.toggle-icon').forEach(iconEl => {
+                    iconEl.textContent = '+';
+                    iconEl.style.transform = 'rotate(0deg)';
+                });
+                
+                // Open clicked section
+                content.classList.add('active');
+                icon.textContent = '−';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Auto-expand section if URL has hash
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const section = document.getElementById(hash + '-content');
+                if (section) {
+                    toggleSection(hash);
+                    setTimeout(() => {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
